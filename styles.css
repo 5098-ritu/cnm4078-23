@@ -1,0 +1,125 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+.navbar a:hover{
+background-color:#FFA500;
+}
+nav {
+    background-color:#FFA500;
+     text-align:right;
+};
+    nav {color: black;
+    padding: 1em;
+text-align:right;
+};
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.code-container, .output-container {
+    flex: 1;
+    padding: 20px;
+    background-color: #e2e2e2;
+    margin-bottom: 10px;
+    overflow-y: auto; /* Enable vertical scrolling */
+    max-height: 200px; /* Set a maximum height */
+ font-size: 1.5em;
+}
+
+.container {
+    display: flex;
+    padding: 20px;
+}
+
+.question-list {
+    flex: 1;
+    padding: 50px;
+    background-color: #f4f4f4;
+    margin-right: 10px;
+ font-size: 1.5em;
+}
+
+.code-output-container {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+}
+
+.code-container, .output-container {
+    flex: 1;
+    padding: 50px;
+    background-color: #e2e2e2;
+    margin-bottom: 10px;
+}
+
+.code-container {
+    margin-bottom: 10px;
+}
+
+h2 {
+    margin-top: 0;
+}
+html, body {
+    height: 100%; /* Make html and body take full height */
+    margin: 0;    /* Remove default margin */
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+}
+
+nav {
+    background-color: #333;
+    color: white;
+    padding: 1em;
+}
+
+.container {
+    display: flex;
+    flex: 1; /* Allow the container to take up remaining space */
+}
+
+.question-list {
+    flex: 1;
+    padding: 20px;
+    background-color: #f4f4f4;
+    margin-right: 10px;
+    overflow-y: auto; /* Enable scrolling if necessary */
+}
+
+.code-output-container {
+    flex: 2;
+    display: none; /* Initially hide the output */
+    flex-direction: column;
+    overflow: hidden; /* Prevent overflow */
+}
+
+.code-container, .output-container {
+    flex: 1;
+    padding: 20px;
+    background-color: #e2e2e2;
+    margin-bottom: 10px;
+    overflow-y: auto; /* Enable vertical scrolling */
+    max-height: calc(100vh - 200px); /* Set max height based on viewport height */
+}
+
+h2 {
+    margin-top: 0;
+}

@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style>
+body{
+background-image:url(picture.jpg);
+background-repeat:no-repeat;
+background-attachment:fixed;
+background-size:100%100%;
+}
+</style>
+ <style>
+  a {
+            color: blue; /* Normal link color */
+        }
+        a:hover {
+            color: green; /* Color when hovered */
+        }
+        a:visited {
+            color: purple; /* Color for visited links */
+}
+</style>
+<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Program Questions</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+.navbar a:hover{
+background-color:#A52A2A;
+}
+
+        nav {
+            background-color: #FFD700;
+            color: black;
+            padding: 1em;
+        }
+.navbar a:hover{
+background-color:#A52A2A;
+}
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            color: black;
+            text-decoration: none;
+        }
+
+        .container {
+            display: flex;
+            padding: 20px;
+        }
+
+        .question-list {
+            flex: 1;
+            padding: 20px;
+            background-color:#F5DEB3;
+            margin-right: 10px;
+        }
+
+        .code-output-container {
+            flex: 2;
+            display: none; /* Initially hide the output */
+            flex-direction: column;
+        }
+
+        .code-container, .output-container {
+            flex: 1;
+            padding: 20px;
+            background-color: #D2B48C;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            margin-top: 0;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">HOME</a></li>
+            <li><a href="about us.html">ABOUT US</a></li>
+          
+        </ul>
+    </nav>
+    <div class="container">
+        <div class="question-list">
+          <h1><center>PROGRAM QUESTIONS</center></h1>
+            <ul><h2><center><U>DATA REPRESENTATION & COMPUTER AIRTHMETIC</U></center></h2>
+                <li><a href="#" onclick="showProgram(1) "style="color: black;">1.DECIMAL TO BINARY. </a></li>
+                <li><a href="#" onclick="showProgram(2)"style="color: black;">2.BINARY TO DECIMAL.</a></li>
+                <li><a href="#" onclick="showProgram(3)"style="color: black;">3.FLOAT TO BINARY.</a></li>
+                
+<li><a href="#" onclick="showProgram(4)" style="color:black;">4. ADD/SUB/Multiplication/Division</a></li>
+
+
+
+            </ul>
+        </div>
+        <div class="code-output-container" id="output-container">
+            <div class="code-container" id="code1">
+                <h2><center></u>DECIMAL TO BINARY</center></u></h2>
+                <pre><code><center>
+#include < stdio.h >
+#include < conio.h >
+int main()
+{
+int n,rem,b=0,base=1;
+printf("Enter a decimal number:");
+scanf("%d",&n);
+while(n>0)
+{
+rem=n%2;
+b=b+rem*base;
+n=n/2;
+base=base*10;
+}
+printf("Binary number is:%d",b);
+getch();
+}
+
+             </center>  </code></pre>
+            </div>
+            <div class="output-container" id="output1">
+                <h2><center>Output</center></h2>
+                <pre><code><center>
+
+
+
+Enter a decimal number: 9
+Binary number is: 1001
+
+
+               </center> </code></pre>
+            </div>
+
+            <div class="code-container" id="code2" style="display:none;">
+                <h2><center>BINARY TO DECIMAL</center></h2>
+                <pre><code><center>
+
+#include < stdio.h >
+#include < conio.h >
+int main()
+{
+int b,dec=0,i=1,rem;
+printf("Enter a binary number:");
+scanf("%d",&b);
+while(b!=0)
+{
+rem=b%10;
+dec=dec+rem*i;
+i=i*2;
+b=b/10;
+}
+printf("decimal number is:%d",dec);
+getch();
+}
+
+
+
+             </center>   </code></pre>
+            </div>
+            <div class="output-container" id="output2" style="display:none;">
+                <h2><center>Output</center></h2>
+                <pre><code><center>
+Enter a binary number: 1001
+Decimal number is :9
+
+
+               </center> </code></pre>
+            </div>
+
+            <div class="code-container" id="code3" style="display:none;">
+                <h2><center>FLOAT TO BINARY</center></h2>
+                <pre><code><center>
+ 
+#include < stdio.h >
+#include < math.h >
+void printfbinary(float number)
+{
+unsigned int binary=(unsigned int)&number;
+//print the binary repersentation
+for(int i=sizeof (float)*8-1;i>=0;i--)
+{
+printf("%d",(*binary >> i)&1);
+if(i%8==0)
+{
+printf(" ");
+}
+}
+printf("\n");
+}
+int main()
+{
+float number;
+printf("Enter a float number:");
+scanf("%f",&number);
+printf("Binary representation of %f is:\n",number);
+printbinary(number);
+return 0;
+}
+
+    </center></code></pre>
+            </div>
+            <div class="output-container" id="output3" style="display:none;">
+                <h2><center>Output</center></h2>
+                <pre><code><center>
+
+
+Enter a float number: 23.4
+Binary representation of 23.400000 is:
+01000001 10111011 00110011 00110011
+
+
+
+                </center></code></pre>
+            </div>
+
+ <div class="code-container" id="code4" style="display:none;">
+                <h2><center>ADD/SUB/Multiplication/Division</center></h2>
+                <pre><code><center>
+ 
+#include < stdio.h >
+
+void add(double a, double b);
+void subtract(double a, double b);
+void multiply(double a, double b);
+void divide(double a, double b);
+
+int main() {
+    int choice;
+    double num1, num2;
+
+    do {
+       
+        printf("Arithmetic Operations Menu\n");
+        printf("1. Addition\n");
+        printf("2. Subtraction\n");
+        printf("3. Multiplication\n");
+        printf("4. Division\n");
+        printf("5. Exit\n");
+        printf("Enter your choice: ");
+        scanf("%d", &choice);
+
+        if (choice >= 1 && choice <= 4) {
+          
+            printf("Enter two numbers: ");
+            scanf("%lf %lf", &num1, &num2);
+        }
+
+       
+        switch (choice) {
+            case 1:
+                add(num1, num2);
+                break;
+            case 2:
+                subtract(num1, num2);
+                break;
+            case 3:
+                multiply(num1, num2);
+                break;
+            case 4:
+                divide(num1, num2);
+                break;
+            case 5:
+                printf("Exiting...\n");
+                break;
+            default:
+                printf("Invalid choice. Please try again.\n");
+                break;
+        }
+        printf("\n");
+    } while (choice != 5);
+
+    return 0;
+}
+void add(double a, double b) {
+    printf("Result: %.2lf\n", a + b);
+}
+
+void subtract(double a, double b) {
+    printf("Result: %.2lf\n", a - b);
+}
+
+void multiply(double a, double b) {
+    printf("Result: %.2lf\n", a * b);
+}
+
+void divide(double a, double b) {
+    if (b != 0) {
+        printf("Result: %.2lf\n", a / b);
+    } else {
+        printf("Error: Division by zero is not allowed.\n");
+    }
+}  
+
+
+
+
+
+</center></code></pre>
+            </div>
+            <div class="output-container" id="output4" style="display:none;">
+                <h2><center>Output</center></h2>
+                <pre><code><center>
+
+
+Arithmetic Operations Menu
+1. Addition
+2. Subtraction
+3. Multiplication
+4. Division
+5. Exit	
+Enter your choice: 1
+Enter two numbers: 2.1
+1.2
+Result: 3.30
+ Arithmetic Operations Menu
+1. Addition
+2. Subtraction
+3. Multiplication
+4. Division
+5. Exit
+Enter your choice: 5
+Exiting...
+
+
+
+
+
+</center></code></pre>
+            </div>
+
+
+
+        </div>
+    </div>
+
+    <script>
+        function showProgram(questionNumber) {
+            // Hide all code and output sections
+            document.querySelectorAll('.code-container, .output-container').forEach((el) => {
+                el.style.display = 'none';
+            });
+
+            // Show the selected question's code and output
+            document.getElementById('code' + questionNumber).style.display = 'block';
+            document.getElementById('output' + questionNumber).style.display = 'block';
+
+            // Show the code-output container
+            document.getElementById('output-container').style.display = 'flex';
+        }
+    </script>
+</body>
+</html>
